@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\DoaController;
+use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\QouteController;
+use App\Http\Controllers\QuranController;
 use Illuminate\Support\Facades\Route;
 
 // NEWSAPI PORTAL ROUTES
@@ -117,3 +120,9 @@ Route::get('/produk/{id}', function ($id) {
 });
 
 Route::get('/qoutes', [QouteController::class, 'index']);
+
+Route::resource('quran', QuranController::class);
+
+Route::resource('doa', DoaController::class);
+
+Route::resource('jadwal', JadwalController::class);
